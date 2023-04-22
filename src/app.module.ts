@@ -3,7 +3,6 @@ import { ConfigModule } from '@nestjs/config';
 import { UserModule } from './user/user.module';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import path from 'path';
 import { UserEntity } from './user/entities/user.entity';
 import { CityModule } from './city/city.module';
 import { AddressModule } from './address/address.module';
