@@ -11,7 +11,7 @@ import { CityEntity } from './city/entities/city.entity';
 import { AddressEntity } from './address/entities/address.entity';
 import { CacheModule } from './cache/cache.module';
 import { AuthModule } from './auth/auth.module';
-import { APP_GUARD } from '@nestjs/core';
+import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { RolesGuard } from './guards/roles.guard';
 import { JwtModule } from '@nestjs/jwt';
 
@@ -44,7 +44,7 @@ import { JwtModule } from '@nestjs/jwt';
 		{
 			provide: APP_GUARD,
 			useClass: RolesGuard
-		}
+		},
 	],
 })
 export class AppModule { }
